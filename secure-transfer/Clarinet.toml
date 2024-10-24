@@ -1,0 +1,29 @@
+[project]
+name = "secure-transfer"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+cache_dir = "/home/runner/Payment/Payment-Controller/secure-transfer/./.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.condition-trait]
+path = "contracts/condition-trait.clar"
+
+[contracts.sip-010-trait-ft-standard]
+path = "contracts/sip-010-trait-ft-standard.clar"
+
+[contracts.smart-escrow]
+path = "contracts/smart-escrow.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
